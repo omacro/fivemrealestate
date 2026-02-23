@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZJB8C2LK7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RZJB8C2LK7');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Five M Real Estate</title>
+  <title>Contact Us — Five M Real Estate | Schedule a Call</title>
   <meta name="description" content="Get in touch with Five M Enterprises. Schedule a consultation to discuss your next commercial or luxury real estate development project.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +19,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="canonical" href="https://fivemrealestate.com/contact.html">
+  <meta property="og:title" content="Contact Five M Real Estate — Schedule a Consultation">
+  <meta property="og:description" content="Get in touch with Five M Enterprises. Schedule a consultation about your next development project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fivemrealestate.com/contact.html">
+  <meta property="og:image" content="https://fivemrealestate.com/assets/images/hero-home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Five M Real Estate — Schedule a Consultation">
+  <meta name="twitter:description" content="Get in touch with Five M Enterprises. Schedule a consultation about your next development project.">
+  <meta name="twitter:image" content="https://fivemrealestate.com/assets/images/hero-home.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Contact Five M Real Estate — Schedule a Consultation",
+    "description": "Get in touch with Five M Enterprises. Schedule a consultation about your next development project.",
+    "url": "https://fivemrealestate.com/contact.html",
+    "publisher": {"@type": "Organization", "name": "Five M Enterprises", "url": "https://fivemrealestate.com"}
+  }
+  </script>
 </head>
 <body>
 
@@ -76,7 +104,7 @@
         <!-- Left: Info -->
         <div class="contact-info reveal">
           <span class="label">Get in Touch</span>
-          <h2>Let's Build<br>Together</h2>
+          <h1>Let's Build<br>Together</h1>
           <p>Whether you have a development opportunity, investment inquiry, or simply want to learn more about Five M, we'd love to hear from you. Our team typically responds within 24 hours.</p>
 
           <div style="margin-top: 48px;">
@@ -162,7 +190,48 @@
                 <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
+            <p id="formStatus" style="margin-top: 16px; text-align: center; display: none;"></p>
           </form>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById('formStatus');
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        interest: form.interest.value,
+        message: form.message.value
+      };
+
+      fetch('https://formsubmit.co/ajax/hello@fivemrealestate.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        status.style.display = 'block';
+        status.style.color = '#c9a84c';
+        status.textContent = 'Message sent successfully. We will be in touch shortly.';
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      })
+      .catch(error => {
+        status.style.display = 'block';
+        status.style.color = '#ff4444';
+        status.textContent = 'Something went wrong. Please email us directly at hello@fivemrealestate.com';
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      });
+    });
+  </script>
         </div>
       </div>
     </div>
