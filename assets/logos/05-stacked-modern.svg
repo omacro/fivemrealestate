@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <style>
+      .gold { fill: #c9a84c; }
+    </style>
+  </defs>
+  <!-- Stacked Modern — Vertical arrangement, clean lines -->
+  <g transform="translate(200, 250)">
+    <!-- Thin top accent line -->
+    <rect class="gold" x="-60" y="-200" width="120" height="1.5" rx="1" opacity="0.4"/>
+    
+    <!-- F -->
+    <text x="0" y="-140" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', sans-serif" font-size="64" font-weight="300" letter-spacing="16" class="gold">F</text>
+    <!-- I -->
+    <text x="0" y="-80" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', sans-serif" font-size="64" font-weight="300" letter-spacing="16" class="gold">I</text>
+    <!-- V -->
+    <text x="0" y="-20" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', sans-serif" font-size="64" font-weight="300" letter-spacing="16" class="gold">V</text>
+    <!-- E -->
+    <text x="0" y="40" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', sans-serif" font-size="64" font-weight="300" letter-spacing="16" class="gold">E</text>
+    
+    <!-- Spacer -->
+    <circle class="gold" cx="0" cy="68" r="3" opacity="0.5"/>
+    
+    <!-- M -->
+    <text x="0" y="120" text-anchor="middle" font-family="'Space Grotesk', 'Helvetica Neue', sans-serif" font-size="64" font-weight="700" letter-spacing="16" class="gold">M</text>
+    
+    <!-- Bottom accent line -->
+    <rect class="gold" x="-60" y="140" width="120" height="1.5" rx="1" opacity="0.4"/>
+    
+    <!-- REAL ESTATE -->
+    <text x="0" y="175" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="13" font-weight="300" letter-spacing="10" class="gold" opacity="0.6">REAL ESTATE</text>
+    
+    <!-- Bottom thin accent -->
+    <rect class="gold" x="-60" y="192" width="120" height="1" rx="1" opacity="0.2"/>
+  </g>
+</svg>

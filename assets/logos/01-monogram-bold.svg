@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .gold { fill: #c9a84c; }
+      .white { fill: #ffffff; }
+    </style>
+  </defs>
+  <!-- 5M Monogram Bold — Geometric lettermark -->
+  <g transform="translate(200,200)">
+    <!-- Outer geometric frame -->
+    <rect x="-140" y="-140" width="280" height="280" rx="8" fill="none" stroke="#c9a84c" stroke-width="3"/>
+    <rect x="-128" y="-128" width="256" height="256" rx="4" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+    
+    <!-- "5" character — built geometrically -->
+    <g transform="translate(-85, -80)">
+      <!-- Top bar -->
+      <rect class="gold" x="0" y="0" width="95" height="18" rx="2"/>
+      <!-- Left vertical -->
+      <rect class="gold" x="0" y="0" width="18" height="85" rx="2"/>
+      <!-- Middle bar -->
+      <rect class="gold" x="0" y="67" width="95" height="18" rx="2"/>
+      <!-- Right descender -->
+      <rect class="gold" x="77" y="67" width="18" height="85" rx="2"/>
+      <!-- Bottom bar -->
+      <rect class="gold" x="0" y="134" width="95" height="18" rx="2"/>
+    </g>
+    
+    <!-- "M" character — angular, modern -->
+    <g transform="translate(30, -80)">
+      <!-- Left vertical -->
+      <rect class="gold" x="0" y="0" width="18" height="152" rx="2"/>
+      <!-- Right vertical -->
+      <rect class="gold" x="100" y="0" width="18" height="152" rx="2"/>
+      <!-- Left diagonal -->
+      <polygon class="gold" points="18,0 68,76 58,76 8,0"/>
+      <!-- Right diagonal -->
+      <polygon class="gold" points="100,0 50,76 60,76 110,0"/>
+      <!-- Center peak fill -->
+      <polygon class="gold" points="18,0 59,68 100,0 82,0 59,38 36,0"/>
+    </g>
+    
+    <!-- Subtle underline accent -->
+    <rect class="gold" x="-85" y="95" width="270" height="2" rx="1" opacity="0.6"/>
+    
+    <!-- Tagline -->
+    <text x="50" y="120" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="14" letter-spacing="6" class="gold" opacity="0.7">REAL ESTATE</text>
+  </g>
+</svg>
